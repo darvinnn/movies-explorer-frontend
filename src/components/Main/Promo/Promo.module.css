@@ -1,0 +1,21 @@
+@import url(../../../constants/globalVariables.css);
+
+.promo {
+  outline: 1px red solid;
+  padding: var(--side-padding);
+  height: 648px;
+  background-color: var(--promo-background-color);
+  position: relative;
+}
+
+.title {
+  margin: 0;
+  margin-top: 149px;
+  width: 640px;
+}
+
+.description {
+  margin: 0;
+  margin-top: 36px;
+  width: 310px;
+}

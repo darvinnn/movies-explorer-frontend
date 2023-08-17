@@ -1,0 +1,8 @@
+@import url(../../constants/globalVariables.css);
+
+.header {
+  padding: var(--side-padding);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
