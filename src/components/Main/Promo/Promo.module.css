@@ -1,9 +1,8 @@
 @import url(../../../constants/globalVariables.css);
 
 .promo {
-  outline: 1px red solid;
   padding: var(--side-padding);
-  height: 648px;
+  padding-bottom: 75px;
   background-color: var(--promo-background-color);
   position: relative;
 }
@@ -12,10 +11,23 @@
   margin: 0;
   margin-top: 149px;
   width: 640px;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
 }
 
 .description {
   margin: 0;
   margin-top: 36px;
   width: 310px;
+  opacity: .5;
+  font-size: 13px;
+  line-height: normal;
+  font-weight: 400;
+}
+
+.logo {
+  position: absolute;
+  top: 149px;
+  right: 70px;
 }
