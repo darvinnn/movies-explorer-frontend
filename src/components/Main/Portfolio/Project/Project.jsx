@@ -7,7 +7,7 @@ function Project({ children, isLast, link }) {
         <p className={style.title}>{children}</p>
         <p className={style.arrow}>↗</p>
       </a>
-      {isLast ? null : (<div className={style.line}></div>)}
+      {isLast || (<div className={style.line}></div>)}
     </li>
   );
 }
