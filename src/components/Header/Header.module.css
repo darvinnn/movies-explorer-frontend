@@ -37,7 +37,7 @@
   width: 76px;
   color: #000;
   height: 32px;
-  background-color: #3DDC84;
+  background-color: var(--accent-color);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -9,7 +9,7 @@
 
 .title {
   margin: 0;
-  margin-top: 149px;
+  padding-top: 149px;
   width: 640px;
   font-weight: 400;
   font-size: 50px;
@@ -20,7 +20,7 @@
   margin: 0;
   margin-top: 36px;
   width: 310px;
-  opacity: .5;
+  opacity: 0.5;
   font-size: 13px;
   line-height: normal;
   font-weight: 400;

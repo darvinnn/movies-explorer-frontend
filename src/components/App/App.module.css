@@ -1,7 +1,7 @@
 @import url(../../vendor/fonts/fonts.css);
 
 .page {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
   color: #fff;

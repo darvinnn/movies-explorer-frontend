@@ -1,5 +1,6 @@
 :root {
-  --main-background-color: blue;
+  --main-background-color: #202020;
+  --accent-color: #3ddc84;
   --side-padding: 0 70px;
   --promo-background-color: #073042;
 }

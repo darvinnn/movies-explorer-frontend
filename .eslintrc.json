@@ -17,17 +17,10 @@
     "react"
   ],
   "rules": {
+    "react/prop-types": 0,
     "linebreak-style": "off",
-    "no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "args": "after-used",
-        "ignoreRestSiblings": false
-      }
-    ],
     "max-len": [
-      "error",
+  "error",
       {
         "code": 130
       }
