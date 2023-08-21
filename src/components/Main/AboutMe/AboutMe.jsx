@@ -1,6 +1,6 @@
 import BlocksTitle from '../BlocksTitle/BlocksTitle.jsx';
 import style from './AboutMe.module.css';
-import StudentPNG from '../../../images/Student.jpg';
+import StudentPNG from '../../../images/Student2.jpg';
 
 function AboutMe() {
   return (
