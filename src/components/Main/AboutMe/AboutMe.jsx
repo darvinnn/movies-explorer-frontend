@@ -1,6 +1,8 @@
 import BlocksTitle from '../BlocksTitle/BlocksTitle.jsx';
-import style from './AboutMe.module.css';
+
 import StudentPNG from '../../../images/Student2.jpg';
+
+import style from './AboutMe.module.css';
 
 function AboutMe() {
   return (
@@ -13,9 +15,9 @@ function AboutMe() {
           <p className={style.text}>Я закончил специалитет в МГСУ.
             Работаю инженером-геотехником, в университете увлекался дизайном. В октябре 2022 года начал кодить.
             Люблю Реакт, собираюсь освоить TypeScript.</p>
-          <a className={style.link} href='https://github.com/darvinnn' target='_blank' rel="noreferrer">GitHub</a>
+          <a className={style.link} href="https://github.com/darvinnn" target="_blank" rel="noreferrer">GitHub</a>
         </div>
-        <img className={style.studentPic} src={StudentPNG} />
+        <img className={style.studentPic} src={StudentPNG} alt="Фотография студента" />
       </div>
     </section>
   );

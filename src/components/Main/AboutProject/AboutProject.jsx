@@ -1,9 +1,10 @@
-import style from './AboutProject.module.css';
 import BlocksTitle from '../BlocksTitle/BlocksTitle.jsx';
+
+import style from './AboutProject.module.css';
 
 function AboutProject() {
   return (
-    <section id='aboutProject' className={style.aboutProject}>
+    <section id="aboutProject" className={style.aboutProject}>
       <BlocksTitle>О проекте</BlocksTitle>
       <div className={style.textGrid}>
         <p className={`${style.textGrid__text} ${style.textGrid__title}`}>Дипломный проект включал 5 этапов</p>

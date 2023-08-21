@@ -1,4 +1,5 @@
 import BlocksTitle from '../BlocksTitle/BlocksTitle.jsx';
+
 import style from './Techs.module.css';
 
 function Techs() {

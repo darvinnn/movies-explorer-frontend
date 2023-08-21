@@ -1,6 +1,7 @@
-import style from './Promo.module.css';
 import { ReactComponent as LogoSVG } from '../../../images/text__COLOR_landing-logo.svg';
 import NavTab from '../NavTab/NavTab.jsx';
+
+import style from './Promo.module.css';
 
 function Promo() {
   return (
