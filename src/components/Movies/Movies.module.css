@@ -3,7 +3,6 @@
 .movies {
   padding: var(--side-padding);
   padding-top: 144px;
-  background-color: var(--main-background-color);
 }
 
 .line {

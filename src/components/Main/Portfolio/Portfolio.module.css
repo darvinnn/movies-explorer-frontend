@@ -1,7 +1,6 @@
 @import url(../../../constants/globalVariables.css);
 
 .portfolio {
-  background-color: var(--main-background-color);
   padding: var(--side-padding);
   padding-top: 100px;
   padding-bottom: 115px;

@@ -1,13 +1,15 @@
-import style from './Movies.module.css';
+import More from './More/More.jsx';
 import MoviesCardList from './MoviesCardList/MoviesCardList.jsx';
 import SearchForm from './SearchForm/SearchForm.jsx';
+import style from './Movies.module.css';
 
 function Movies() {
   return (
     <main className={style.movies}>
       <SearchForm />
-      <MoviesCardList />
       <div className={style.line} />
+      <MoviesCardList />
+      <More />
     </main>
   );
 }

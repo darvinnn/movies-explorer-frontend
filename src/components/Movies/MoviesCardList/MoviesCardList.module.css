@@ -1,0 +1,12 @@
+@import url(../../../constants/globalVariables.css);
+
+.cadrList {
+  margin-top: 10px;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+  justify-content: center;
+  row-gap: 32px;
+  column-gap: 32px;
+}

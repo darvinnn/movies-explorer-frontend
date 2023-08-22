@@ -1,0 +1,14 @@
+@import url(../../constants/globalVariables.css);
+
+.savedMovies {
+  padding: var(--side-padding);
+  padding-top: 144px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin-top: 43px;
+  opacity: 0.2;
+  background-color: #aaaaaa;
+}

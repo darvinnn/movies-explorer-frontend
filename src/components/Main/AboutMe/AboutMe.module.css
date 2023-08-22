@@ -3,7 +3,6 @@
 .aboutMe {
   padding: var(--side-padding);
   padding-top: 110px;
-  background-color: var(--main-background-color);
 }
 
 .infoBlock {
