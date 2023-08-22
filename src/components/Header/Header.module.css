@@ -15,3 +15,7 @@
   margin-right: auto;
   min-width: 38px;
 }
+
+.logo:hover {
+  opacity: 0.8;
+}

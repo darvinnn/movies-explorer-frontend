@@ -1,32 +1,44 @@
-.FilterCheckbox {
+.filterCheckbox {
   margin-top: 26px;
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.FilterCheckbox__button {
+.filterCheckbox__button {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   border: none;
   width: 36px;
   height: 20px;
   border-radius: 12px;
-  background-color: var(--accent-color);
+  background-color: #343434;
   transition: justify-content 1s;
   cursor: pointer;
 }
 
-.FilterCheckbox__button::after {
+.filterCheckbox__button:hover {
+  opacity: 0.8;
+}
+
+.filterCheckbox__button::after {
   content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  background-color: #a0a0a0;
+}
+
+.filterCheckbox__button_active {
+  justify-content: flex-end;
+  background-color: var(--accent-color);
+}
+
+.filterCheckbox__button_active::after {
   background-color: var(--main-color);
 }
 
-.FilterCheckbox__text {
+.filterCheckbox__text {
   margin: 0;
   font-size: 13px;
   font-weight: 400;

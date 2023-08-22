@@ -7,7 +7,7 @@ import { ReactComponent as LogoSVG } from '../../images/logo.svg';
 import style from './Header.module.css';
 
 function Header() {
-  if (useLocation().pathname === '/signup' || useLocation().pathname === '/signin') return;
+  if (useLocation().pathname === '/signup' || useLocation().pathname === '/signin' || useLocation().pathname === '/404') return;
   return (
     <header className={style.header}>
       <Link to="/" className={style.logo}>

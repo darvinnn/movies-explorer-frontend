@@ -6,7 +6,7 @@ import { ReactComponent as AccountIconSVG } from '../../images/accountIcon.svg';
 import style from './Navigation.module.css';
 
 function Navigation() {
-  const location = useLocation();
+  const location = useLocation().pathname;
   const notAuthorized = (
     <ul className={style.navigation}>
       <Link to="/signup" className={style.link}>Регистрация</Link>
@@ -16,10 +16,10 @@ function Navigation() {
 
   const authorized = (
     <ul className={style.navigation}>
-      <Link to="/movies" className={style.link}>Фильмы</Link>
-      <Link to="/saved-movies" className={style.link}>Сохранённые фильмы</Link>
+      <Link to="/movies" className={`${style.link} ${location === '/movies' && style.link_active}`}>Фильмы</Link>
+      <Link to="/saved-movies" className={`${style.link} ${location === '/saved-movies' && style.link_active}`}>Сохранённые фильмы</Link>
       <div className={style.account}>
-        <Link to="/profile" className={style.link}>Аккаунт</Link>
+        <Link to="/profile" className={`${style.link} ${location === '/profile' && style.link_active}`}>Аккаунт</Link>
         <Link to="/profile">
           <AccountIconSVG />
         </Link>
@@ -28,7 +28,7 @@ function Navigation() {
   );
   return (
     <nav>
-      {(location.pathname === '/' || location.pathname === '/signin' || location.pathname === '/signup')
+      {(location === '/' || location === '/signin' || location === '/signup')
         ? notAuthorized
         : authorized}
     </nav>

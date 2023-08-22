@@ -51,6 +51,10 @@
   cursor: pointer;
 }
 
+.link:hover {
+  opacity: 0.7;
+}
+
 .studentPic {
   width: 270px;
   height: 327px;

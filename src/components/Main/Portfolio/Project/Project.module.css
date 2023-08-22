@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+.project__link:hover {
+  opacity: 0.7;
+}
+
 .title {
   margin: 0;
   width: calc(880 / 1280 * 100vw);
