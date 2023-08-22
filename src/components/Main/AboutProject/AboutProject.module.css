@@ -57,7 +57,7 @@
 
 .infoGrid__element_grey {
   background-color: #303030;
-  color: #fff;
+  color: var(--main-color);
   font-weight: 400;
   line-height: normal;
 }

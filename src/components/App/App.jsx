@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Header from '../Header/Header.jsx';
 import Main from '../Main/Main.jsx';
 import Footer from '../Footer/Footer.jsx';
+import Movies from '../Movies/Movies.jsx';
 
 import style from './App.module.css';
 
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/movies" />
+        <Route path="/movies" element={<Movies />} />
         <Route path="/saved-movies" />
         <Route path="/profile" />
         <Route path="/signin" />

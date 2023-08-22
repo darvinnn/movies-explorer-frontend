@@ -42,7 +42,7 @@
 }
 
 .link {
-  color: #fff;
+  color: var(--main-color);
   text-decoration: none;
 }
 

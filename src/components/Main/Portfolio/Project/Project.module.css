@@ -1,3 +1,5 @@
+@import url(../../../../constants/globalVariables.css);
+
 .project {
   list-style-type: none;
 }
@@ -5,7 +7,7 @@
 .project__link {
   margin-top: 20px;
   display: flex;
-  color: #fff;
+  color: var(--main-color);
   text-decoration: none;
 }
 

@@ -1,0 +1,69 @@
+@import url(../../../constants/globalVariables.css);
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid rgba(170, 170, 170, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.textField {
+  flex: auto;
+  background-color: transparent;
+  border: none;
+  padding: 0 15px;
+  outline: none;
+  color: var(--main-color);
+  height: 52px;
+}
+
+.button {
+  border: none;
+  padding: 0;
+  height: 52px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #4285f4;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.shortMeter {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.shortMeter__button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
+  width: 36px;
+  height: 20px;
+  border-radius: 12px;
+  background-color: var(--accent-color);
+  transition: justify-content 1s;
+  cursor: pointer;
+}
+
+.shortMeter__button::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+}
+
+.shortMeter__text {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+}
