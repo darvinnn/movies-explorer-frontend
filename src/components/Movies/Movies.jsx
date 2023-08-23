@@ -7,7 +7,7 @@ function Movies() {
   return (
     <main className={style.movies}>
       <SearchForm />
-      <div className={style.line} />
+      <div className={style.movies__line} />
       <MoviesCardList />
       <More />
     </main>

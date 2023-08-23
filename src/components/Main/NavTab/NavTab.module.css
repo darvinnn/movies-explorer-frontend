@@ -1,6 +1,6 @@
 @import url(../../../constants/globalVariables.css);
 
-.button {
+.navTab__button {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   padding: 0;
@@ -15,6 +15,6 @@
   color: var(--main-color);
 }
 
-.button:hover {
+.navTab__button:hover {
   opacity: 0.8;
 }

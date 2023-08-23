@@ -8,16 +8,16 @@ function AboutMe() {
   return (
     <section className={style.aboutMe}>
       <BlocksTitle>Студент</BlocksTitle>
-      <div className={style.infoBlock}>
-        <div className={style.textBlock}>
-          <h3 className={style.title}>Максим</h3>
-          <p className={style.about}>Фронтенд-разработчик, 24 года</p>
-          <p className={style.text}>Я закончил специалитет в МГСУ.
+      <div className={style.aboutMe__infoBlock}>
+        <div className={style.aboutMe__textBlock}>
+          <h3 className={style.aboutMe__title}>Максим</h3>
+          <p className={style.aboutMe__about}>Фронтенд-разработчик, 24 года</p>
+          <p className={style.aboutMe__text}>Я закончил специалитет в МГСУ.
             Работаю инженером-геотехником, в университете увлекался дизайном. В октябре 2022 года начал кодить.
             Люблю Реакт, собираюсь освоить TypeScript.</p>
-          <a className={style.link} href="https://github.com/darvinnn" target="_blank" rel="noreferrer">GitHub</a>
+          <a className={style.aboutMe__link} href="https://github.com/darvinnn" target="_blank" rel="noreferrer">GitHub</a>
         </div>
-        <img className={style.studentPic} src={StudentPNG} alt="Фотография студента" />
+        <img className={style.aboutMe__studentPic} src={StudentPNG} alt="Фотография студента" />
       </div>
     </section>
   );

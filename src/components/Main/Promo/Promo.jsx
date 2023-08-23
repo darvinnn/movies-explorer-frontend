@@ -6,10 +6,10 @@ import style from './Promo.module.css';
 function Promo() {
   return (
     <section className={style.promo}>
-      <h1 className={style.title}> Учебный проект студента факультета Веб-разработки.</h1>
-      <p className={style.description}>Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
+      <h1 className={style.promo__title}> Учебный проект студента факультета Веб-разработки.</h1>
+      <p className={style.promo__description}>Листайте ниже, чтобы узнать больше про этот проект и его создателя.</p>
       <NavTab />
-      <LogoSVG className={style.logo} />
+      <LogoSVG className={style.promo__logo} />
     </section>
   );
 }

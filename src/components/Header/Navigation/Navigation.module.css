@@ -5,7 +5,7 @@
   margin: 0;
 }
 
-.link {
+.navigation__link {
   cursor: pointer;
   list-style: none;
   font-weight: 400;
@@ -16,15 +16,15 @@
   text-decoration: none;
 }
 
-.link:hover {
+.navigation__link:hover {
   opacity: 0.7;
 }
 
-.link_active {
+.navigation__link_active {
   font-weight: 500;
 }
 
-.link_login {
+.navigation__link_login {
   width: 76px;
   color: #000;
   height: 32px;
@@ -36,7 +36,7 @@
   margin-left: 30px;
 }
 
-.account {
+.navigation__account {
   display: flex;
   align-items: center;
   gap: 13px;

@@ -5,20 +5,20 @@
   padding-top: 110px;
 }
 
-.infoBlock {
+.aboutMe__infoBlock {
   display: flex;
   padding-top: 66px;
   gap: 20px;
 }
 
-.textBlock {
+.aboutMe__textBlock {
   display: flex;
   flex-direction: column;
   width: 600px;
   align-items: flex-start;
 }
 
-.title {
+.aboutMe__title {
   margin: 0;
   font-size: 50px;
   font-weight: 400;
@@ -26,14 +26,14 @@
   letter-spacing: -2px;
 }
 
-.about {
+.aboutMe__about {
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
   margin: 18px 0 0;
 }
 
-.text {
+.aboutMe__text {
   margin: 26px 0 0;
   font-size: 14px;
   font-style: normal;
@@ -41,7 +41,7 @@
   line-height: 22px;
 }
 
-.link {
+.aboutMe__link {
   margin-top: auto;
   font-size: 14px;
   font-weight: 500;
@@ -51,11 +51,11 @@
   cursor: pointer;
 }
 
-.link:hover {
+.aboutMe__link:hover {
   opacity: 0.7;
 }
 
-.studentPic {
+.aboutMe__studentPic {
   width: 270px;
   height: 327px;
   object-fit: cover;

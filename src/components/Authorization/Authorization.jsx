@@ -7,8 +7,8 @@ import style from './Authorization.module.css';
 function Authorization({ title, children, buttonValue, captionText, captionLink }) {
   return (
     <main className={style.auth}>
-      <Link to='/'>
-        <LogoSVG />
+      <Link to="/">
+        <LogoSVG className={style.auth__logo} />
       </Link>
       <h2 className={style.auth__title}>{title}</h2>
       <form className={style.auth__form}>

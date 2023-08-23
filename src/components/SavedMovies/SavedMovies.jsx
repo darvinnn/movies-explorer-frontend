@@ -7,7 +7,7 @@ function SavedMovies() {
   return (
     <main className={style.savedMovies}>
       <SearchForm />
-      <div className={style.line} />
+      <div className={style.savedMovies__line} />
       <MoviesCardList />
     </main>
   );

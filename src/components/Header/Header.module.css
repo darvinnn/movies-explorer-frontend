@@ -11,11 +11,11 @@
   align-items: center;
 }
 
-.logo {
+.header__logo {
   margin-right: auto;
   min-width: 38px;
 }
 
-.logo:hover {
+.header__logo:hover {
   opacity: 0.8;
 }

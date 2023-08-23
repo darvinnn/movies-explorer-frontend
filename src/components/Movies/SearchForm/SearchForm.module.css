@@ -8,7 +8,7 @@
   border-radius: 8px;
 }
 
-.textField {
+.searchForm__textField {
   flex: auto;
   background-color: transparent;
   border: none;
@@ -18,7 +18,7 @@
   height: 52px;
 }
 
-.button {
+.searchForm__button {
   border: none;
   padding: 0;
   height: 52px;
@@ -33,6 +33,6 @@
   cursor: pointer;
 }
 
-.button:hover {
+.searchForm__button:hover {
   opacity: 0.8;
 }

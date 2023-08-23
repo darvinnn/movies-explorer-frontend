@@ -15,7 +15,7 @@
   opacity: 0.7;
 }
 
-.title {
+.project__title {
   margin: 0;
   width: calc(880 / 1280 * 100vw);
   max-width: 880px;
@@ -25,7 +25,7 @@
   letter-spacing: -1.2px;
 }
 
-.arrow {
+.project__arrow {
   margin: 0 0 0 auto;
   font-size: 30px;
   font-weight: 400;
@@ -34,7 +34,7 @@
   cursor: pointer;
 }
 
-.line {
+.project__line {
   width: 100%;
   height: 1px;
   background-color: #424242;

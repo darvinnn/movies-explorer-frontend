@@ -7,7 +7,7 @@ function NavTab() {
   };
 
   return (
-    <button className={style.button} type="button" onClick={scrollToAboutProject}>Узнать больше</button>
+    <button className={style.navTab__button} type="button" onClick={scrollToAboutProject}>Узнать больше</button>
   );
 }
 
