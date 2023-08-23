@@ -40,3 +40,15 @@
   background-color: #424242;
   margin-top: 9px;
 }
+
+@media (max-width: 768px) {
+  .project__title {
+    font-size: 28px;
+    letter-spacing: -1.12px;
+  }
+
+  .project__arrow {
+    font-size: 28px;
+    letter-spacing: -1.12px;
+  }
+}

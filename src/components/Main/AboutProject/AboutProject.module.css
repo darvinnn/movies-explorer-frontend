@@ -24,6 +24,7 @@
 .textGrid__title {
   letter-spacing: -0.8px;
   font-size: 20px;
+  line-height: normal;
 }
 
 .infoGrid {
@@ -59,4 +60,29 @@
   color: var(--main-color);
   font-weight: 400;
   line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .aboutProject {
+    padding: 90px 50px 76px;
+  }
+
+  .textGrid {
+    column-gap: 30px;
+    row-gap: 22px;
+  }
+
+  .textGrid__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .textGrid__title {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .infoGrid {
+    margin-top: 93px;
+  }
 }

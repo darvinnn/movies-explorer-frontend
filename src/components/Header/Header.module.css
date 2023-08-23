@@ -19,3 +19,10 @@
 .header__logo:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 30px;
+    width: calc(100% - 60px);
+  }
+}

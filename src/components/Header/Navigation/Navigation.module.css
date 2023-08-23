@@ -20,6 +20,10 @@
   opacity: 0.7;
 }
 
+.navigation__link_main {
+  display: none;
+}
+
 .navigation__link_active {
   font-weight: 500;
 }
@@ -41,4 +45,73 @@
   align-items: center;
   gap: 13px;
   margin-left: 30px;
+}
+
+.navigation__burgerButton {
+  display: none;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  background-image: url(../../../images/burgerMenuButton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navigation__burgerButton:hover {
+  opacity: 0.8;
+}
+
+.navigation__closePopupButton {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 22px;
+  height: 22px;
+  background-image: url(../../../images/closeNavigationPopupButton.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  display: none;
+}
+
+.navigation__closePopupButton:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    position: absolute;
+    top: 0;
+    right: -520px;
+    width: 340px;
+    height: 100vh;
+    background-color: var(--main-background-color);
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+    padding: 159px 90px 0;
+  }
+
+  .navigation_active {
+    transform: translateX(-100%);
+  }
+
+  .navigation__burgerButton {
+    display: block
+  }
+
+  .navigation__closePopupButton {
+    display: block;
+  }
+
+  .navigation__link_main {
+    display: block;
+  }
 }

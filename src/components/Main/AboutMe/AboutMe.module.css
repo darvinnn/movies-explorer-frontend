@@ -8,13 +8,13 @@
 .aboutMe__infoBlock {
   display: flex;
   padding-top: 66px;
-  gap: 20px;
+  gap: 49px;
 }
 
 .aboutMe__textBlock {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  max-width: 600px;
   align-items: flex-start;
 }
 
@@ -61,4 +61,31 @@
   object-fit: cover;
   border-radius: 10px;
   margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 90px 50px 0;
+  }
+
+  .aboutMe__title {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1.6px;
+  }
+
+  .aboutMe__about {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutMe__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutMe__studentPic {
+    width: 255px;
+    height: 307px;
+  }
 }

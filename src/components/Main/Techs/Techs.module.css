@@ -50,3 +50,28 @@
   line-height: normal;
   letter-spacing: -0.56px;
 }
+
+@media (max-width: 768px) {
+  .techs {
+    padding: 90px 50px;
+  }
+
+  .techs__title {
+    margin-top: 80px;
+  }
+
+  .techs__description {
+    margin-top: 22px;
+  }
+
+  .techs__stacks {
+    margin-top: 83px;
+  }
+
+  .techs__stack {
+    width: 84px;
+    height: 57px;
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}

@@ -3,6 +3,7 @@
 .savedMovies {
   padding: var(--side-padding);
   padding-top: 144px;
+  flex: 1;
 }
 
 .savedMovies__line {
