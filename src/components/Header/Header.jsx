@@ -1,12 +1,13 @@
 import { Link, useLocation } from 'react-router-dom';
 
+import { useState } from 'react';
+
 import { ReactComponent as LogoSVG } from '../../images/logo.svg';
 
 import Navigation from './Navigation/Navigation.jsx';
 
 
 import style from './Header.module.css';
-import { useState } from 'react';
 
 function Header() {
   if (useLocation().pathname === '/signup' || useLocation().pathname === '/signin' || useLocation().pathname === '/404') return;
