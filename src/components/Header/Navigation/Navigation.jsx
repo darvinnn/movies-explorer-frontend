@@ -21,6 +21,7 @@ function Navigation() {
   const authorized = (
     <>
       <button className={style.navigation__burgerButton} type="button" onClick={() => setIsOpen(true)} />
+
       <ul className={`${style.navigation} ${style.navigation_authorized} ${isOpen ? style.navigation_active : ''}`}>
         <button className={style.navigation__closePopupButton} type="button" onClick={handleClosePopup} />
         <Link to="/" onClick={handleClosePopup} className={`${style.navigation__link} ${style.navigation__link_main} ${location === '/' ? style.navigation__link_active : ''}`}>Главная</Link>
