@@ -58,7 +58,7 @@
   margin-top: 223px;
   border: none;
   padding: 0;
-  background-color: #4285F4;
+  background-color: #4285f4;
   color: var(--main-color);
   font-size: 14px;
   font-weight: 500;
@@ -68,6 +68,16 @@
 
 .form__submitButton:hover {
   opacity: 0.8;
+}
+
+.form__submitButton_disabled {
+  cursor: default;
+  background-color: #f8f8f8;
+  color: #c2c2c2;
+}
+
+.form__submitButton_disabled:hover {
+  opacity: 1;
 }
 
 .form__field {

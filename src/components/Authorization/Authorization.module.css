@@ -40,6 +40,16 @@
   opacity: 0.8;
 }
 
+.auth__submit_disabled {
+  cursor: default;
+  background-color: #f8f8f8;
+  color: #c2c2c2;
+}
+
+.auth__submit_disabled:hover {
+  opacity: 1;
+}
+
 .auth__caption {
   margin: 16px 0 0;
   text-align: center;

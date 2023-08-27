@@ -75,3 +75,35 @@
     letter-spacing: -0.48px;
   }
 }
+
+@media (max-width: 350px) {
+  .techs {
+    padding: 70px 18px;
+  }
+
+  .techs__title {
+    margin-top: 60px;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: -1.2px;
+  }
+
+  .techs__description {
+    margin-top: 24px;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
+    width: 292px;
+  }
+
+  .techs__stacks {
+    margin-top: 50px;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 178px;
+  }
+
+  .techs__stack {
+    width: 84px;
+  }
+}

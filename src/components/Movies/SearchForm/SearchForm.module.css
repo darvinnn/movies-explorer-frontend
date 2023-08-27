@@ -9,13 +9,17 @@
 }
 
 .searchForm__textField {
-  flex: auto;
+  flex: 1;
+  min-width: 150px;
   background-color: transparent;
   border: none;
   padding: 0 15px;
   outline: none;
   color: var(--main-color);
   height: 52px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .searchForm__button {
@@ -35,4 +39,23 @@
 
 .searchForm__button:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 350px) {
+  .searchForm {
+    padding: 6px;
+    margin: 0 2px;
+  }
+
+  .searchForm__button {
+    height: 44px;
+    width: 80px;
+  }
+
+  .searchForm__textField {
+    height: 44px;
+    padding: 0 6px;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }

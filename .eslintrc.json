@@ -21,11 +21,18 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
     "react/prop-types": "off",
-    "indent": [
+    // "indent": [
+    //   "warn",
+    //   2,
+    //   {
+    //     "SwitchCase": 1
+    //   }
+    // ],
+    "indent": "off",
+    "max-len": [
       "warn",
-      2,
       {
-        "SwitchCase": 1
+        "code": 120
       }
     ],
     "no-unused-vars": "warn",

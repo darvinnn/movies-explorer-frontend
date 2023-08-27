@@ -66,3 +66,18 @@
 .card__button_saved {
   background-image: url(../../../images/cardButtonIconSaved.svg);
 }
+
+@media (max-width: 350px) {
+  .card {
+    padding: 14px 0;
+    gap: 14px;
+  }
+
+  .card__title {
+    margin-left: 14px;
+  }
+
+  .card__duration {
+    margin-right: 14px;
+  }
+}

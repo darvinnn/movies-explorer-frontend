@@ -6,22 +6,27 @@
   padding-bottom: 110px;
 }
 
-.textGrid {
+.textBlock {
   margin-top: 70px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
-  row-gap: 26px;
+  display: flex;
+  gap: 40px;
 }
 
-.textGrid__text {
+.textBlock__section {
+  display: flex;
+  gap: 26px;
+  flex-direction: column;
+  width: calc(550 / 1280 * 100vw);
+}
+
+.textBlock__text {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.textGrid__title {
+.textBlock__title {
   letter-spacing: -0.8px;
   font-size: 20px;
   line-height: normal;
@@ -67,22 +72,49 @@
     padding: 90px 50px 76px;
   }
 
-  .textGrid {
+  .textBlock {
     column-gap: 30px;
     row-gap: 22px;
   }
 
-  .textGrid__text {
+  .textBlock__text {
     font-size: 12px;
     line-height: 18px;
   }
 
-  .textGrid__title {
+  .textBlock__title {
     font-size: 20px;
     line-height: normal;
   }
 
   .infoGrid {
     margin-top: 93px;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutProject {
+    padding: 70px 18px;
+  }
+
+  .textBlock {
+    margin-top: 60px;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .textBlock__section {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .infoGrid {
+    margin-top: 60px;
+    grid-template-columns: 100px 184px;
+  }
+
+  .infoGrid__element {
+    font-size: 11px;
+    line-height: normal;
   }
 }

@@ -2,7 +2,7 @@
 
 .aboutMe {
   padding: var(--side-padding);
-  padding-top: 110px;
+  margin-top: 110px;
 }
 
 .aboutMe__infoBlock {
@@ -65,7 +65,8 @@
 
 @media (max-width: 768px) {
   .aboutMe {
-    padding: 90px 50px 0;
+    padding: 0 50px;
+    margin-top: 90px;
   }
 
   .aboutMe__title {
@@ -87,5 +88,43 @@
   .aboutMe__studentPic {
     width: 255px;
     height: 307px;
+  }
+}
+
+@media (max-width: 350px) {
+  .aboutMe {
+    margin-top: 70px;
+    padding: 0 14px;
+  }
+
+  .aboutMe__infoBlock {
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 40px;
+  }
+
+  .aboutMe__studentPic {
+    order: -1;
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutMe__title {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .aboutMe__about {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutMe__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutMe__link {
+    margin-top: 40px;
   }
 }

@@ -14,8 +14,10 @@ function Footer() {
       <div className={style.footer__links}>
         <p className={style.footer__date}>© 2023</p>
         <nav className={style.footer__navigation}>
-          <a className={style.footer__link} href="https://practicum.yandex.ru/" target="_blanc" rel="noreferrer">Яндекс.Практикум</a>
-          <a className={style.footer__link} href="https://github.com/darvinnn" target="_blanc" rel="noreferrer">Github</a>
+          <a className={style.footer__link} href="https://practicum.yandex.ru/"
+            target="_blanc" rel="noreferrer">Яндекс.Практикум</a>
+          <a className={style.footer__link} href="https://github.com/darvinnn"
+            target="_blanc" rel="noreferrer">Github</a>
         </nav>
       </div>
     </footer>

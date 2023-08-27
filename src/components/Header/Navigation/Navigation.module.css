@@ -91,16 +91,16 @@
 
 @media (max-width: 768px) {
   .navigation_authorized {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -520px;
     width: 340px;
-    height: 100vh;
+    height: calc(100vh - 159px - 92px);
     background-color: var(--main-background-color);
     display: flex;
     gap: 28px;
     flex-direction: column;
-    padding: 159px 90px 0;
+    padding: 159px 90px 92px;
     transition: 0.3s ease-in-out;
   }
 
@@ -116,7 +116,29 @@
     display: block;
   }
 
+  .navigation__account {
+    margin-top: auto;
+  }
+
   .navigation__link_main {
     display: block;
+  }
+
+  .navigation__link_active {
+    font-weight: 400;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navigation__link {
+    font-size: 10px;
+  }
+
+  .navigation__link_login {
+    width: 54px;
+    height: 26px;
+    margin-left: 14px;
   }
 }

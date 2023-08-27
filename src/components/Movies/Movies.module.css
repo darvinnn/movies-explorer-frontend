@@ -23,3 +23,13 @@
     margin-top: 51px;
   }
 }
+
+@media (max-width: 350px) {
+  .movies {
+    padding: 144px 10px 0;
+  }
+
+  .movies__line {
+    margin-top: 63px;
+  }
+}

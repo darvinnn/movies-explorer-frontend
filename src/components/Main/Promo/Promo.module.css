@@ -59,3 +59,18 @@
     margin-top: 22px;
   }
 }
+
+@media (max-width: 350px) {
+  .promo__logo {
+    width: 210px;
+    height: 206px;
+    margin-top: 144px;
+  }
+
+  .promo__title {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -1.2px;
+    width: 300px;
+  }
+}

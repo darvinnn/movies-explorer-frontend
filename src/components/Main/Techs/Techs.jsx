@@ -7,7 +7,8 @@ function Techs() {
     <section className={style.techs}>
       <BlocksTitle>Технологии</BlocksTitle>
       <h2 className={style.techs__title}>7 технологий</h2>
-      <p className={style.techs__description}>На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
+      <p className={style.techs__description}>На курсе веб-разработки мы освоили технологии,
+        которые применили в дипломном проекте.</p>
       <ul className={style.techs__stacks}>
         <li className={style.techs__stack}>HTML</li>
         <li className={style.techs__stack}>CSS</li>

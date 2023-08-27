@@ -24,3 +24,14 @@
     padding: 90px 50px 80px;
   }
 }
+
+@media (max-width: 350px) {
+  .portfolio {
+    padding: 70px 14px;
+  }
+
+  .portfolio__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

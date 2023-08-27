@@ -8,7 +8,8 @@ function Portfolio() {
       <ul className={style.portfolio__projects}>
         <Project link="https://github.com/darvinnn/how-to-learn" >Статичный сайт</Project>
         <Project link="https://github.com/darvinnn/russian-travel">Адаптивный сайт</Project>
-        <Project link="https://github.com/darvinnn/react-mesto-api-full-gha" isLast={true}>Одностраничное приложение</Project>
+        <Project link="https://github.com/darvinnn/react-mesto-api-full-gha"
+          isLast={true}>Одностраничное приложение</Project>
       </ul>
     </section>
   );

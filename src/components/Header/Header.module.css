@@ -26,3 +26,10 @@
     width: calc(100% - 60px);
   }
 }
+
+@media (max-width: 350px) {
+  .header {
+    padding: 0 14px;
+    width: calc(100% - 28px);
+  }
+}
