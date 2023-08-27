@@ -47,6 +47,10 @@
   margin-left: 30px;
 }
 
+.navigation__accountIcon:hover {
+  opacity: 0.8;
+}
+
 .navigation__burgerButton {
   display: none;
   margin-left: auto;
@@ -86,7 +90,7 @@
 }
 
 @media (max-width: 768px) {
-  .navigation {
+  .navigation_authorized {
     position: absolute;
     top: 0;
     right: -520px;
@@ -97,6 +101,7 @@
     gap: 28px;
     flex-direction: column;
     padding: 159px 90px 0;
+    transition: 0.3s ease-in-out;
   }
 
   .navigation_active {
@@ -104,7 +109,7 @@
   }
 
   .navigation__burgerButton {
-    display: block
+    display: block;
   }
 
   .navigation__closePopupButton {

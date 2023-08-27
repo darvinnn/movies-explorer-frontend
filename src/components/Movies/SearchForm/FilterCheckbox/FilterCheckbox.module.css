@@ -6,15 +6,16 @@
 }
 
 .filterCheckbox__button {
+  padding: 0 6px;
   display: flex;
   align-items: center;
   border: none;
-  width: 36px;
+  width: 24px;
   height: 20px;
   border-radius: 12px;
   background-color: #343434;
-  transition: justify-content 1s;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 .filterCheckbox__button:hover {
@@ -27,15 +28,20 @@
   height: 8px;
   border-radius: 50%;
   background-color: #a0a0a0;
+  transition: 0.4s;
 }
 
-.filterCheckbox__button_active {
-  justify-content: flex-end;
-  background-color: var(--accent-color);
+.filterCheckbox__checkbox {
+  display: none;
 }
 
-.filterCheckbox__button_active::after {
+.filterCheckbox__checkbox:checked + .filterCheckbox__button::after {
+  transform: translateX(16px);
   background-color: var(--main-color);
+}
+
+.filterCheckbox__checkbox:checked + .filterCheckbox__button {
+  background-color: var(--accent-color);
 }
 
 .filterCheckbox__text {
