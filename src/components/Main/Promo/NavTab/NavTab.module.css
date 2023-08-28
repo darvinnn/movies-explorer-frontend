@@ -24,3 +24,9 @@
     margin-top: 92px;
   }
 }
+
+@media (max-width: 350px) {
+  .navTab__button {
+    margin-top: 81px;
+  }
+}

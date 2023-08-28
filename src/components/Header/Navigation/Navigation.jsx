@@ -13,8 +13,9 @@ function Navigation() {
   const handleClosePopup = () => setIsOpen(false);
   const notAuthorized = (
     <ul className={style.navigation}>
-      <NavLink to="/signup" className={style.navigation__link}>Регистрация</NavLink>
-      <NavLink to="/signin" className={`${style.navigation__link} ${style.navigation__link_login}`}>Войти</NavLink>
+      <NavLink to="/signup" className={style.navigation__link_notAuthorized}>Регистрация</NavLink>
+      <NavLink to="/signin" className={`${style.navigation__link_notAuthorized} 
+      ${style.navigation__link_login}`}>Войти</NavLink>
     </ul >
   );
 

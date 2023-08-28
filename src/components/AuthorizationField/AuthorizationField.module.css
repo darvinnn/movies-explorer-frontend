@@ -11,7 +11,7 @@
 .authorizationField__input {
   border: none;
   background-color: transparent;
-  padding-bottom: 10px;
+  padding: 0 0 9px;
   color: var(--main-color);
   width: 100%;
   border-bottom: 1px solid #424242;
@@ -19,6 +19,11 @@
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
+}
+
+.authorizationField__input_invalid {
+  color: #EE3465;
+  border-bottom: 1px solid #EE3465;
 }
 
 .authorizationField__input:focus {

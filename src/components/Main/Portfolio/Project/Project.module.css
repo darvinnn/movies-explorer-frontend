@@ -47,13 +47,17 @@
     letter-spacing: -1.12px;
   }
 
+  .project__line {
+    background-color: #E6E6E6;
+  }
+
   .project__arrow {
     font-size: 28px;
     letter-spacing: -1.12px;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 600px) {
   .project__title {
     font-size: 18px;
     line-height: 28px;

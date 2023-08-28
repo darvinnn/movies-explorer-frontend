@@ -3,7 +3,7 @@
 .aboutProject {
   padding: var(--side-padding);
   padding-top: 110px;
-  padding-bottom: 110px;
+  padding-bottom: 100px;
 }
 
 .textBlock {
@@ -35,6 +35,7 @@
 .infoGrid {
   margin-top: 110px;
   display: grid;
+  row-gap: 5px;
   grid-template-columns: 1fr 4fr;
   text-align: center;
 }
@@ -69,12 +70,16 @@
 
 @media (max-width: 768px) {
   .aboutProject {
-    padding: 90px 50px 76px;
+    padding: 90px 50px 83px;
   }
 
   .textBlock {
     column-gap: 30px;
     row-gap: 22px;
+  }
+
+  .textBlock__section {
+    gap: 23px;
   }
 
   .textBlock__text {
@@ -89,18 +94,31 @@
 
   .infoGrid {
     margin-top: 93px;
+    grid-template-columns: calc(140/768*100vw) auto;
+    row-gap: 3px;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 600px) {
   .aboutProject {
     padding: 70px 18px;
   }
 
   .textBlock {
-    margin-top: 60px;
+    margin-top: 61px;
     flex-direction: column;
-    gap: 56px;
+    gap: 58px;
+  }
+
+  .textBlock__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .textBlock__title {
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: -0.72px;
   }
 
   .textBlock__section {
@@ -110,7 +128,8 @@
 
   .infoGrid {
     margin-top: 60px;
-    grid-template-columns: 100px 184px;
+    grid-template-columns: calc(100/320*100vw) calc(184/320*100vw);
+    row-gap: 0;
   }
 
   .infoGrid__element {

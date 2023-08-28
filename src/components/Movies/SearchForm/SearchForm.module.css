@@ -41,21 +41,25 @@
   opacity: 0.8;
 }
 
-@media (max-width: 350px) {
-  .searchForm {
-    padding: 6px;
-    margin: 0 2px;
-  }
-
+@media (max-width: 400px) {
   .searchForm__button {
-    height: 44px;
+    height: 42px;
     width: 80px;
   }
 
   .searchForm__textField {
-    height: 44px;
+    height: 42px;
     padding: 0 6px;
     font-size: 16px;
     line-height: 16px;
   }
+}
+
+@media (max-width: 350px) {
+  .searchForm {
+    padding: 6px;
+    margin: 0 4px;
+  }
+
+
 }

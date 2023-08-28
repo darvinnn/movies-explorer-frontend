@@ -32,3 +32,33 @@
 .notFound__link:hover {
   opacity: 0.7;
 }
+
+@media (max-width:768px) {
+  .notFound {
+    margin-top: 408px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width:350px) {
+  .notFound {
+    margin-top: 330px;
+  }
+
+  .notFound__err {
+    font-size: 80px;
+    line-height: normal;
+  }
+
+  .notFound__text {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .notFound__link {
+    margin-top: 284px;
+    font-size: 12px;
+    line-height: normal;
+  }
+}

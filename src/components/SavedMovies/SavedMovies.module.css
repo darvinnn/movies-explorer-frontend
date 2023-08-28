@@ -1,8 +1,7 @@
 @import url(../../constants/globalVariables.css);
 
 .savedMovies {
-  padding: var(--side-padding);
-  padding-top: 144px;
+  padding: 143px 66px 0;
   flex: 1;
 }
 
@@ -16,7 +15,7 @@
 
 @media (max-width: 768px) {
   .savedMovies {
-    padding: 144px 30px 0;
+    padding: 143px 30px 0;
   }
 
   .savedMovies__line {

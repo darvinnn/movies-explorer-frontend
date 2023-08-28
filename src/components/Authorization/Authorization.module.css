@@ -12,7 +12,7 @@
 }
 
 .auth__title {
-  margin: 40px 0 0;
+  margin: 37px 0 0;
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
@@ -24,7 +24,8 @@
 }
 
 .auth__submit {
-  margin-top: 69px;
+  margin-top: 93px;
+  padding: 0;
   border: none;
   border-radius: 3px;
   background-color: #4285f4;
@@ -70,4 +71,45 @@
 
 .auth__captionLink:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 800px) {
+  .auth {
+    margin-top: 233px;
+  }
+}
+
+@media (max-width: 500px) {
+  .auth {
+    align-items: center;
+    margin-top: 57px;
+    width: calc(260/320*100vw);
+  }
+
+  .auth__title {
+    margin-top: 46px;
+  }
+
+  .auth__form {
+    margin-top: 56px;
+    width: 100%;
+  }
+
+  .auth__submit {
+    width: 100%;
+    margin-top: 181px;
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .auth__caption {
+    margin-top: 14px;
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .auth__captionLink {
+    font-size: 12px;
+    line-height: normal;
+  }
 }

@@ -2,7 +2,7 @@
 
 .portfolio {
   padding: var(--side-padding);
-  padding-top: 100px;
+  padding-top: 102px;
   padding-bottom: 115px;
 }
 
@@ -21,15 +21,21 @@
 
 @media (max-width: 768px) {
   .portfolio {
-    padding: 90px 50px 80px;
+    padding: 92px 50px 80px;
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 600px) {
   .portfolio {
     padding: 70px 14px;
   }
 
+  .portfolio__projects {
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 350px) {
   .portfolio__title {
     font-size: 14px;
     line-height: 20px;

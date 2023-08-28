@@ -32,7 +32,6 @@
 }
 
 .card__image {
-  height: 200px;
   object-fit: cover;
   width: 100%;
 }
@@ -75,9 +74,11 @@
 
   .card__title {
     margin-left: 14px;
+    font-size: 12px;
   }
 
   .card__duration {
     margin-right: 14px;
+    font-size: 10px;
   }
 }
