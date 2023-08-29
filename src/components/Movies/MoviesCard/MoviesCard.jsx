@@ -10,7 +10,7 @@ function MoviesCard({ isSavedMovie }) {
   return (
     <div className={style.card}>
       <div className={style.card__info}>
-        <p className={style.card__title}>В погоне за Бэнкси</p>
+        <h2 className={style.card__title}>В погоне за Бэнкси</h2>
         <p className={style.card__duration}>27 минут</p>
       </div>
       <img className={style.card__image} src={cardImage} alt="Картинка фильма" />

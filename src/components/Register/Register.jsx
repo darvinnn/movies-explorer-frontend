@@ -4,7 +4,7 @@ import useInput from '../../utils/Validation/Validation.jsx';
 import ValidationError from '../ValidationError/ValidationError.jsx';
 
 function Register() {
-  const name = useInput('', { isEmpty: null, minLength: 2 });
+  const name = useInput('', { isEmpty: null, minLength: 2, maxLength: 20 });
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
 

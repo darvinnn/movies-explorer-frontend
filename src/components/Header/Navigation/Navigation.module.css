@@ -31,6 +31,10 @@
   text-decoration: none;
 }
 
+.navigation__link_notAuthorized:hover {
+  opacity: 0.8;
+}
+
 .navigation__link_main {
   display: none;
 }

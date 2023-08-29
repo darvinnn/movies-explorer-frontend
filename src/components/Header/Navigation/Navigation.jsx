@@ -12,18 +12,18 @@ function Navigation() {
 
   const handleClosePopup = () => setIsOpen(false);
   const notAuthorized = (
-    <ul className={style.navigation}>
+    <nav className={style.navigation}>
       <NavLink to="/signup" className={style.navigation__link_notAuthorized}>Регистрация</NavLink>
       <NavLink to="/signin" className={`${style.navigation__link_notAuthorized} 
       ${style.navigation__link_login}`}>Войти</NavLink>
-    </ul >
+    </nav >
   );
 
   const authorized = (
     <>
       <button className={style.navigation__burgerButton} type="button" onClick={() => setIsOpen(true)} />
 
-      <ul className={`${style.navigation} ${style.navigation_authorized} ${isOpen ? style.navigation_active : ''}`}>
+      <nav className={`${style.navigation} ${style.navigation_authorized} ${isOpen ? style.navigation_active : ''}`}>
         <button className={style.navigation__closePopupButton} type="button" onClick={handleClosePopup} />
         <NavLink to="/" onClick={handleClosePopup} className={({ isActive }) => isActive ? `${style.navigation__link}
          ${style.navigation__link_main} ${style.navigation__link_active}` : `${style.navigation__link} 
@@ -40,15 +40,15 @@ function Navigation() {
             <AccountIconSVG className={style.navigation__accountIcon} />
           </NavLink>
         </div>
-      </ul >
+      </nav >
     </>
   );
   return (
-    <nav>
+    <>
       {(location === '/' || location === '/signin' || location === '/signup')
         ? notAuthorized
         : authorized}
-    </nav>
+    </>
   );
 }
 

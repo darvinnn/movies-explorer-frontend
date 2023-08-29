@@ -18,8 +18,8 @@ function AuthorizationField({ title, inputType, onChange, onBlur, value, isValid
 
   return (
     <>
-      <p className={style.authorizationField__title}>{title}</p>
-      <input onChange={onChange} onBlur={handleBlur} value={value}
+      <label htmlFor={title} className={style.authorizationField__title}>{title}</label>
+      <input id={title} onChange={onChange} onBlur={handleBlur} value={value}
         className={isError ? `${style.authorizationField__input} ${style.authorizationField__input_invalid}`
           : style.authorizationField__input} type={inputType || 'text'} />
     </>

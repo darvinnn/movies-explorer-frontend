@@ -1,6 +1,7 @@
 @import url(../../constants/globalVariables.css);
 
 .authorizationField__title {
+  display: inline-block;
   margin: 24px 0 5px;
   color: #8b8b8b;
   font-size: 10px;

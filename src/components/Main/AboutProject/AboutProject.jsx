@@ -8,7 +8,7 @@ function AboutProject() {
       <BlocksTitle>О проекте</BlocksTitle>
       <div className={style.textBlock}>
         <div className={style.textBlock__section}>
-          <p className={`${style.textBlock__text} ${style.textBlock__title}`}>Дипломный проект включал 5 этапов</p>
+          <h3 className={`${style.textBlock__text} ${style.textBlock__title}`}>Дипломный проект включал 5 этапов</h3>
           <p className={style.textBlock__text}>Составление плана, работу над бэкендом, вёрстку,
             добавление функциональности и финальные доработки.</p>
         </div>

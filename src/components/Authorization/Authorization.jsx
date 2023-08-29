@@ -10,7 +10,7 @@ function Authorization({ title, children, buttonValue, buttonIsActive, captionTe
       <Link to="/">
         <LogoSVG className={style.auth__logo} />
       </Link>
-      <h2 className={style.auth__title}>{title}</h2>
+      <h1 className={style.auth__title}>{title}</h1>
       <form className={style.auth__form}>
         {children}
       </form>
