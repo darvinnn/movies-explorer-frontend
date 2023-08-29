@@ -1,0 +1,32 @@
+import Authorization from '../Authorization/Authorization.jsx';
+import AuthorizationField from '../AuthorizationField/AuthorizationField.jsx';
+import useInput from '../../utils/Validation/Validation.jsx';
+import ValidationError from '../ValidationError/ValidationError.jsx';
+
+function Register() {
+  const name = useInput('', { isEmpty: null, minLength: 2, maxLength: 20 });
+  const email = useInput('', { isEmpty: null, isEmail: true });
+  const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
+
+  return (
+    <>
+      <Authorization title="Добро пожаловать!" buttonValue="Зарегистрироваться"
+        buttonIsActive={email.isValidInput && password.isValidInput && name.isValidInput}
+        captionText="Уже зарегистрированы?" captionLink="Войти">
+        <AuthorizationField onChange={name.onChange} onBlur={name.onBlur} isDirty={name.isDirty}
+          isValid={name.isValidInput} value={name.value} title="Имя" />
+        {(name.isDirty && !name.isValidInput) && <ValidationError>{name.errorMessage()}</ValidationError>}
+        <AuthorizationField onChange={email.onChange} onBlur={email.onBlur} isDirty={email.isDirty}
+          isValid={email.isValidInput} value={email.value}
+          title="E-mail" inputType="email" />
+        {(email.isDirty && !email.isValidInput) && <ValidationError>{email.errorMessage()}</ValidationError>}
+        <AuthorizationField onChange={password.onChange} onBlur={password.onBlur} isDirty={password.isDirty}
+          isValid={password.isValidInput} value={password.value}
+          title="Пароль" inputType="password" />
+        {(password.isDirty && !password.isValidInput) && <ValidationError>{password.errorMessage()}</ValidationError>}
+      </Authorization>
+    </>
+  );
+}
+
+export default Register;

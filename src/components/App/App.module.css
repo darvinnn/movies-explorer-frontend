@@ -1,0 +1,10 @@
+@import url(../../vendor/fonts/fonts.css);
+
+.page {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
+  min-height: 100vh;
+}

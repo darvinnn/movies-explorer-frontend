@@ -1,0 +1,32 @@
+@import url(../../../../constants/globalVariables.css);
+
+.navTab__button {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 0;
+  margin-top: 146px;
+  width: 129px;
+  height: 36px;
+  background-color: transparent;
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.navTab__button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .navTab__button {
+    margin-top: 92px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navTab__button {
+    margin-top: 81px;
+  }
+}

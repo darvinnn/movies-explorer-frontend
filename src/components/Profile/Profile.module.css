@@ -1,0 +1,168 @@
+@import url(../../constants/globalVariables.css);
+
+.profile {
+  padding: var(--side-padding);
+  padding-top: 74px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.profile__title {
+  margin: 0;
+  padding-top: 74px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.profile__line {
+  margin-top: 14px;
+  width: 100%;
+  height: 1px;
+  background-color: #424242;
+}
+
+.profile__exitButton {
+  margin-top: 16px;
+  border: none;
+  padding: 0;
+  color: #ee3465;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile__exitButton:hover {
+  opacity: 0.7;
+}
+
+.hiddenElement {
+  display: none;
+}
+
+.form {
+  margin-top: 106px;
+  width: 410px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form__submitButton {
+  width: 100%;
+  height: 45px;
+  margin-top: 223px;
+  border: none;
+  padding: 0;
+  background-color: #4285f4;
+  color: var(--main-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.form__submitButton:hover {
+  opacity: 0.8;
+}
+
+.form__submitButton_disabled {
+  cursor: default;
+  background-color: #f8f8f8;
+  color: #c2c2c2;
+}
+
+.form__submitButton_disabled:hover {
+  opacity: 1;
+}
+
+.form__field {
+  margin-top: 17px;
+  width: 100%;
+  display: flex;
+}
+
+.form__title {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+.form__input {
+  flex-grow: 1;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+  color: var(--main-color);
+}
+
+.form__input::placeholder {
+  color: var(--main-color);
+}
+
+.form__edit {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: var(--main-color);
+  margin-top: 218px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.form__edit:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 74px 30px 0;
+  }
+
+  .profile__title {
+    padding-top: 236px;
+  }
+
+  .form {
+    margin-top: 79px;
+  }
+
+  .form__edit {
+    margin-top: 208px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile__title {
+    padding-top: 70px;
+  }
+
+  .profile__exitButton {
+    font-size: 12px;
+  }
+
+  .form {
+    width: 260px;
+    margin-top: 63px;
+  }
+
+  .form__edit {
+    margin-top: 377px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,43 @@
+@import url(../../../constants/globalVariables.css);
+
+.portfolio {
+  padding: var(--side-padding);
+  padding-top: 102px;
+  padding-bottom: 115px;
+}
+
+.portfolio__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #8b8b8b;
+}
+
+.portfolio__projects {
+  margin: 50px 0 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 92px 50px 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    padding: 70px 14px;
+  }
+
+  .portfolio__projects {
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 350px) {
+  .portfolio__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
