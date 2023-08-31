@@ -4,16 +4,11 @@ import MoviesCard from '../MoviesCard/MoviesCard.jsx';
 
 import style from './MoviesCardList.module.css';
 
-function MoviesCardList() {
+function MoviesCardList({ cards }) {
   const isSavedMovies = useLocation().pathname === '/saved-movies';
   return (
     <section className={style.cadrList}>
-      <MoviesCard isSavedMovie={isSavedMovies} />
-      <MoviesCard isSavedMovie={isSavedMovies} />
-      <MoviesCard isSavedMovie={isSavedMovies} />
-      <MoviesCard isSavedMovie={isSavedMovies} />
-      <MoviesCard isSavedMovie={isSavedMovies} />
-      <MoviesCard isSavedMovie={isSavedMovies} />
+      {cards.map(card => (<MoviesCard key={card.id} isSavedMovie={isSavedMovies} card={card} />))}
     </section>
   );
 }
