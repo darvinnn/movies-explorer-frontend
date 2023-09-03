@@ -13,12 +13,16 @@
   background-color: #aaaaaa;
 }
 
-.movies__error {
+.movies__text {
   margin: 20px 0 0;
-  color: #EE3465;
+  color: var(--main-color);
   font-size: 16px;
   font-weight: 400;
   line-height: normal;
+}
+
+.movies__text_error {
+  color: #ee3465;
 }
 
 @media (max-width: 768px) {

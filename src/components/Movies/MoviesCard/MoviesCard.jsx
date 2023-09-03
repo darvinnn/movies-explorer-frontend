@@ -1,17 +1,19 @@
 
 import { Link } from 'react-router-dom';
+import { memo } from 'react';
 
 import { BASE_URl } from '../../../constants/constants';
 import calculateDuration from '../../../utils/calculateDuration/calculateDuration';
 
 import style from './MoviesCard.module.css';
 
-function MoviesCard({ isSavedMovie, card }) {
+
+const MoviesCard = memo(function MoviesCard({ isSavedMovie, card }) {
   const getRandomValue = () => Math.random() < 0.5;
   const boolean = getRandomValue();
 
   return (
-    <div className={style.card}>
+    <li className={style.card}>
       <div className={style.card__info}>
         <h2 className={style.card__title}>{card.nameRU}</h2>
         <p className={style.card__duration}>{calculateDuration(card.duration)}</p>
@@ -22,8 +24,8 @@ function MoviesCard({ isSavedMovie, card }) {
       </Link>
       <button className={`${style.card__button} ${isSavedMovie ? style.card__button_saved
         : (boolean || style.card__button_selected)}`} type="button">{isSavedMovie || boolean && 'Сохранить'}</button>
-    </div>
+    </li>
   );
-}
+});
 
 export default MoviesCard;

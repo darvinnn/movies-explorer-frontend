@@ -4,7 +4,7 @@ import FilterCheckbox from './FilterCheckbox/FilterCheckbox.jsx';
 
 import style from './SearchForm.module.css';
 
-function SearchForm({ searchInput, onSubmit, requestIsSent, setRequestIsSent }) {
+function SearchForm({ searchInput, onSubmit, requestIsSent, setRequestIsSent, handleCheckbox, isChecked }) {
 
   const handleFocus = () => setRequestIsSent(false);
 
@@ -18,7 +18,7 @@ function SearchForm({ searchInput, onSubmit, requestIsSent, setRequestIsSent }) 
         </div>
         {(requestIsSent && !searchInput.isValidInput)
           && <ValidationError>Нужно ввести ключевое слово</ValidationError>}
-        <FilterCheckbox />
+        <FilterCheckbox handleCheckbox={handleCheckbox} isChecked={isChecked} />
       </form>
     </section>
   );

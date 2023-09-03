@@ -1,9 +1,9 @@
 import style from './More.module.css';
 
-function More() {
+function More({ onClick }) {
   return (
     <div className={style.more}>
-      <button className={style.more__button} type="button">Ещё</button>
+      <button className={style.more__button} onClick={onClick} type="button">Ещё</button>
     </div>
   );
 }
