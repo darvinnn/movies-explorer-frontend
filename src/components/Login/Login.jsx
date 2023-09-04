@@ -2,15 +2,21 @@ import Authorization from '../Authorization/Authorization.jsx';
 import AuthorizationField from '../AuthorizationField/AuthorizationField.jsx';
 import useInput from '../../utils/Validation/Validation.jsx';
 import ValidationError from '../ValidationError/ValidationError.jsx';
+import { login } from '../../utils/Api/MainApi.js';
 
 
 function Login() {
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
 
+  const handleSubmit = () => {
+    login({ email: email.value, password: password.value })
+      .catch(console.log)
+  };
+
   return (
     <>
-      <Authorization title="Рады видеть!" buttonValue="Войти"
+      <Authorization onSubmit={handleSubmit} title="Рады видеть!" buttonValue="Войти"
         buttonIsActive={email.isValidInput && password.isValidInput} captionText="Ещё не зарегистрированы?"
         captionLink="Регистрация">
         <AuthorizationField onChange={email.onChange} onBlur={email.onBlur} isDirty={email.isDirty} value={email.value}

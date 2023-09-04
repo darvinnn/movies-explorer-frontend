@@ -2,15 +2,21 @@ import Authorization from '../Authorization/Authorization.jsx';
 import AuthorizationField from '../AuthorizationField/AuthorizationField.jsx';
 import useInput from '../../utils/Validation/Validation.jsx';
 import ValidationError from '../ValidationError/ValidationError.jsx';
+import { register } from '../../utils/Api/MainApi.js';
 
 function Register() {
   const name = useInput('', { isEmpty: null, minLength: 2, maxLength: 20 });
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
 
+  const handleSubmit = () => {
+    register({ name: name.value, email: email.value, password: password.value })
+      .catch(console.log);
+  };
+
   return (
     <>
-      <Authorization title="Добро пожаловать!" buttonValue="Зарегистрироваться"
+      <Authorization onSubmit={handleSubmit} title="Добро пожаловать!" buttonValue="Зарегистрироваться"
         buttonIsActive={email.isValidInput && password.isValidInput && name.isValidInput}
         captionText="Уже зарегистрированы?" captionLink="Войти">
         <AuthorizationField onChange={name.onChange} onBlur={name.onBlur} isDirty={name.isDirty}
