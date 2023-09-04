@@ -5,6 +5,7 @@
   margin: 70px auto 0;
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .auth__logo:hover {
@@ -83,7 +84,7 @@
   .auth {
     align-items: center;
     margin-top: 57px;
-    width: calc(260/320*100vw);
+    width: calc(260 / 320 * 100vw);
   }
 
   .auth__title {
