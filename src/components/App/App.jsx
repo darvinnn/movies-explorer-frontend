@@ -16,12 +16,15 @@ import { getUser } from '../../utils/Api/MainApi';
 import CurrentUserContext from '../../contexts/CurrentUserContext.js';
 import IsLoggedInContext from '../../contexts/IsLoggedInContext.js';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute.jsx';
+import LoadingScreen from '../LoadingScreen/LoadingScreen.jsx';
+import ProtectedFromAuthorized from '../ProtectedFromAuthorized/ProtectedFromAuthorized.jsx';
 
 import style from './App.module.css';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     handleGetUser();
@@ -32,9 +35,15 @@ function App() {
       .then(res => {
         setCurrentUser(res);
         setIsLoggedIn(true);
+        setIsLoading(false);
       })
-      .catch(() => setIsLoggedIn(false));
-  }
+      .catch(() => {
+        setIsLoggedIn(false);
+        setIsLoading(false);
+      });
+  };
+
+  if (isLoading) return <LoadingScreen />;
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -46,8 +55,8 @@ function App() {
             <Route path="/movies" element={<ProtectedRoute element={Movies} />} />
             <Route path="/saved-movies" element={<ProtectedRoute element={SavedMovies} />} />
             <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
-            <Route path="/signin" element={<Login onLogin={handleGetUser} />} />
-            <Route path="/signup" element={<Register />} />
+            <Route path="/signin" element={<ProtectedFromAuthorized onLogin={handleGetUser} element={Login} />} />
+            <Route path="/signup" element={<ProtectedFromAuthorized element={Register} />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<RedirectTo404 />} />
           </Routes>

@@ -19,11 +19,13 @@ function Profile() {
   const email = useInput(currentUser.email, { isEmpty: null, isEmail: true });
 
   const handleSubmit = () => (name.isValidInput && email.isValidInput) && setAreFieldsLocked(true);
-
   const handleExit = () => {
     logout()
       .then(() => {
         setIsLoggedIn(false);
+        if (localStorage.getItem('searchRequest')) {
+          localStorage.removeItem('searchRequest');
+        }
         navigate('/');
       })
       .catch(console.log);

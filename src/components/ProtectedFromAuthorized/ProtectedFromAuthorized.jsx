@@ -3,12 +3,12 @@ import { Navigate } from 'react-router-dom';
 
 import IsLoggedInContext from '../../contexts/IsLoggedInContext';
 
-function ProtectedRoute({ element: Component }) {
+function ProtectedFromAuthorized({ element: Component, ...props }) {
   const [isLoggedIn] = useContext(IsLoggedInContext);
 
   return (
-    isLoggedIn ? <Component /> : <Navigate to="/" />
+    isLoggedIn ? <Navigate to="/movies" /> : <Component {...props} />
   );
 }
 
-export default ProtectedRoute;
+export default ProtectedFromAuthorized;

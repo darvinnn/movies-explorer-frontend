@@ -74,12 +74,6 @@
   opacity: 0.7;
 }
 
-@media (max-width: 800px) {
-  .auth {
-    margin-top: 233px;
-  }
-}
-
 @media (max-width: 500px) {
   .auth {
     align-items: center;

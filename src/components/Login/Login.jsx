@@ -5,21 +5,25 @@ import AuthorizationField from '../AuthorizationField/AuthorizationField.jsx';
 import useInput from '../../utils/Validation/Validation.jsx';
 import ValidationError from '../ValidationError/ValidationError.jsx';
 import { login } from '../../utils/Api/MainApi.js';
+import { useContext, useEffect } from 'react';
+import IsLoggedInContext from '../../contexts/IsLoggedInContext.js';
 
 
 function Login({ onLogin }) {
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
+  const [isLoggedIn] = useContext(IsLoggedInContext);
   const navigate = useNavigate();
 
   const handleSubmit = () => {
     login({ email: email.value, password: password.value })
-      .then(() => {
-        onLogin();
-        navigate('/');
-      })
+      .then(() => onLogin())
       .catch(console.log);
   };
+
+  useEffect(() => {
+    isLoggedIn && navigate('/movies');
+  }, [isLoggedIn]);
 
   return (
     <>
