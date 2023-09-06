@@ -1,14 +1,14 @@
-import { NavLink, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useContext, useState } from 'react';
 
 import { ReactComponent as AccountIconSVG } from '../../../images/accountIcon.svg';
-
+import IsLoggedInContext from '../../../contexts/IsLoggedInContext.js';
 
 import style from './Navigation.module.css';
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation().pathname;
+  const [isLoggedIn] = useContext(IsLoggedInContext);
 
   const handleClosePopup = () => setIsOpen(false);
   const notAuthorized = (
@@ -45,9 +45,7 @@ function Navigation() {
   );
   return (
     <>
-      {(location === '/' || location === '/signin' || location === '/signup')
-        ? notAuthorized
-        : authorized}
+      {isLoggedIn ? authorized : notAuthorized}
     </>
   );
 }

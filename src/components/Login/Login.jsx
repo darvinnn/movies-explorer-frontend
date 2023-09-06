@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import Authorization from '../Authorization/Authorization.jsx';
 import AuthorizationField from '../AuthorizationField/AuthorizationField.jsx';
 import useInput from '../../utils/Validation/Validation.jsx';
@@ -5,13 +7,18 @@ import ValidationError from '../ValidationError/ValidationError.jsx';
 import { login } from '../../utils/Api/MainApi.js';
 
 
-function Login() {
+function Login({ onLogin }) {
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
     login({ email: email.value, password: password.value })
-      .catch(console.log)
+      .then(() => {
+        onLogin();
+        navigate('/');
+      })
+      .catch(console.log);
   };
 
   return (

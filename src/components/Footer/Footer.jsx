@@ -3,10 +3,9 @@ import { useLocation } from 'react-router-dom';
 import style from './Footer.module.css';
 
 function Footer() {
-  if (useLocation().pathname === '/signup'
-    || useLocation().pathname === '/signin'
-    || useLocation().pathname === '/404'
-    || useLocation().pathname === '/profile') return;
+  const location = useLocation().pathname;
+  if (location === '/signup' || location === '/signin' || location === '/404' || location === '/profile') return;
+
   return (
     <footer className={style.footer}>
       <p className={style.footer__caption}>Учебный проект Яндекс.Практикум х BeatFilm.</p>
