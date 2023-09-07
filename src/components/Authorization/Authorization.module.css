@@ -24,8 +24,18 @@
   min-height: 266px;
 }
 
+.auth__error {
+  align-self: center;
+  margin: 50px 0 0;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  color: #ee3465;
+  font-size: 13px;
+}
+
 .auth__submit {
-  margin-top: 93px;
+  margin-top: 23px;
   padding: 0;
   border: none;
   border-radius: 3px;
@@ -90,9 +100,13 @@
     width: 100%;
   }
 
+  .auth__error {
+    margin-top: 140px;
+  }
+
   .auth__submit {
     width: 100%;
-    margin-top: 181px;
+    margin-top: 21px;
     font-size: 12px;
     line-height: normal;
   }

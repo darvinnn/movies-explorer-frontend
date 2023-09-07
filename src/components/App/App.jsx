@@ -55,8 +55,8 @@ function App() {
             <Route path="/movies" element={<ProtectedRoute element={Movies} />} />
             <Route path="/saved-movies" element={<ProtectedRoute element={SavedMovies} />} />
             <Route path="/profile" element={<ProtectedRoute element={Profile} />} />
-            <Route path="/signin" element={<ProtectedFromAuthorized onLogin={handleGetUser} element={Login} />} />
-            <Route path="/signup" element={<ProtectedFromAuthorized element={Register} />} />
+            <Route path="/signin" element={<ProtectedFromAuthorized getUser={handleGetUser} element={Login} />} />
+            <Route path="/signup" element={<ProtectedFromAuthorized getUser={handleGetUser} element={Register} />} />
             <Route path="/404" element={<NotFound />} />
             <Route path="*" element={<RedirectTo404 />} />
           </Routes>

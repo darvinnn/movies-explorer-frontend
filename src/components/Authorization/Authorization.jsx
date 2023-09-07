@@ -4,7 +4,7 @@ import { ReactComponent as LogoSVG } from '../../images/logo.svg';
 
 import style from './Authorization.module.css';
 
-function Authorization({ title, children, buttonValue, buttonIsActive, captionText, captionLink, onSubmit }) {
+function Authorization({ title, children, buttonValue, buttonIsActive, captionText, captionLink, onSubmit, error }) {
   return (
     <main className={style.auth}>
       <Link to="/">
@@ -14,9 +14,14 @@ function Authorization({ title, children, buttonValue, buttonIsActive, captionTe
       <form className={style.auth__form}>
         {children}
       </form>
+      <span className={style.auth__error}>
+        {error}
+      </span>
       <button className={buttonIsActive ? style.auth__submit : `${style.auth__submit} 
       ${style.auth__submit_disabled}`} disabled={!buttonIsActive} onClick={onSubmit}
-        type="button">{buttonValue}</button>
+        type="button">
+        {buttonValue}
+      </button>
       <p className={style.auth__caption}>
         {captionText}
         <Link className={style.auth__captionLink} to={captionLink === 'Войти' ? '/signin' : '/signup'}>

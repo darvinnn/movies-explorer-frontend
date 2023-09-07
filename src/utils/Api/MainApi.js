@@ -34,10 +34,20 @@ const logout = () => {
     credentials: 'include',
   })
     .then((res) => {
-      console.log(res);
       if (res.ok) return res;
       else throw res;
     });
+};
+
+const updateUser = ({ name, email }) => {
+  return _request('/users/me', {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({ name, email }),
+  });
 };
 
 const _request = (endpoint, fetchObject) => {
@@ -55,4 +65,5 @@ export {
   register,
   getUser,
   logout,
+  updateUser,
 };

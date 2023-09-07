@@ -1,22 +1,41 @@
+import { useNavigate } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+
 import Authorization from '../Authorization/Authorization.jsx';
 import AuthorizationField from '../AuthorizationField/AuthorizationField.jsx';
 import useInput from '../../utils/Validation/Validation.jsx';
 import ValidationError from '../ValidationError/ValidationError.jsx';
-import { register } from '../../utils/Api/MainApi.js';
+import { login, register } from '../../utils/Api/MainApi.js';
+import IsLoggedInContext from '../../contexts/IsLoggedInContext.js';
 
-function Register() {
+function Register({ getUser }) {
   const name = useInput('', { isEmpty: null, minLength: 2, maxLength: 20 });
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
+  const [isLoggedIn] = useContext(IsLoggedInContext);
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
+    setError(false);
     register({ name: name.value, email: email.value, password: password.value })
-      .catch(console.log);
+      .then(() => {
+        login({ email: email.value, password: password.value })
+          .then(() => getUser());
+      })
+      .catch((err) => {
+        if (err.status === 409) setError('Пользователь с таким email уже зарегистрирован');
+        if (err.status === 400) setError('Некорректные данные пользователя');
+      });
   };
+
+  useEffect(() => {
+    isLoggedIn && navigate('/movies');
+  }, [isLoggedIn]);
 
   return (
     <>
-      <Authorization onSubmit={handleSubmit} title="Добро пожаловать!" buttonValue="Зарегистрироваться"
+      <Authorization error={error} onSubmit={handleSubmit} title="Добро пожаловать!" buttonValue="Зарегистрироваться"
         buttonIsActive={email.isValidInput && password.isValidInput && name.isValidInput}
         captionText="Уже зарегистрированы?" captionLink="Войти">
         <AuthorizationField onChange={name.onChange} onBlur={name.onBlur} isDirty={name.isDirty}
