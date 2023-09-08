@@ -32,6 +32,13 @@ function Movies() {
 
   const handleCheckbox = () => setIsChecked(!isChecked);
 
+  const filterMovies = (movies) => {
+    const request = searchInput.value.toLowerCase();
+    const filteredMovies = movies.filter((movie) => (movie.nameRU.toLowerCase().includes(request)
+      || movie.nameEN.toLowerCase().includes(request)));
+    return filteredMovies;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -42,11 +49,12 @@ function Movies() {
     setIsError(false);
     getCards()
       .then(res => {
-        setCards(res);
+        const filteredCards = filterMovies(res);
+        setCards(filteredCards);
         setIsLoading(false);
         const searchRequest = {
           fieldText: searchInput.value,
-          cards: res,
+          cards: filteredCards,
           isChecked: isChecked,
         };
         localStorage.setItem('searchRequest', JSON.stringify(searchRequest));

@@ -9,17 +9,20 @@ import { login } from '../../utils/Api/MainApi.js';
 import IsLoggedInContext from '../../contexts/IsLoggedInContext.js';
 
 
-function Login({ getUser }) {
+function Login({ setUser }) {
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
-  const [isLoggedIn] = useContext(IsLoggedInContext);
-  const [error, setError] = useState('false');
+  const [isLoggedIn, setIsLoggedIn] = useContext(IsLoggedInContext);
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = () => {
     setError(false);
     login({ email: email.value, password: password.value })
-      .then(() => getUser())
+      .then((res) => {
+        setUser(res);
+        setIsLoggedIn(true);
+      })
       .catch((err) => {
         if (err.status === 401) setError('Неверный Email или пароль');
       });

@@ -9,7 +9,7 @@ import CurrentUserContext from '../../contexts/CurrentUserContext.js';
 
 import style from './Profile.module.css';
 
-function Profile() {
+function Profile({ setUser }) {
   const [, setIsLoggedIn] = useContext(IsLoggedInContext);
   const currentUser = useContext(CurrentUserContext);
   const navigate = useNavigate();
@@ -19,12 +19,13 @@ function Profile() {
 
   const name = useInput(currentUser.name, { isEmpty: null, minLength: 2, maxLength: 20 });
   const email = useInput(currentUser.email, { isEmpty: null, isEmail: true });
-
+  console.log(currentUser);
   const handleSubmit = () => {
     setError(false);
     updateUser({ name: name.value, email: email.value })
-      .then(() => {
+      .then((res) => {
         setSuccessMessage('Данные успешно обновлены');
+        setUser(res);
         setAreFieldsLocked(true);
       })
       .catch((err) => {
@@ -68,14 +69,17 @@ function Profile() {
             onBlur={email.onBlur} value={email.value} disabled={areFieldsLocked} />
         </div>
         {(email.isDirty && !email.isValidInput) && <ValidationError>{email.errorMessage()}</ValidationError>}
-
         {successMessage
           ? <span className={style.form__success}>{successMessage}</span>
           : <span className={style.form__error}>{error}</span>}
         <input className={`${style.form__edit} ${areFieldsLocked ? '' : style.hiddenElement}`}
           type="button" onClick={handleChange} value="Редактировать" />
         <input className={`${style.form__submitButton} ${areFieldsLocked ? style.hiddenElement : ''} 
-          ${(name.isValidInput && email.isValidInput) ? '' : style.form__submitButton_disabled}`}
+          ${(!name.isValidInput || !email.isValidInput
+            || ((name.value === currentUser.name) && (email.value === currentUser.email)))
+            ? style.form__submitButton_disabled : ''}`}
+          disabled={(!name.isValidInput || !email.isValidInput
+            || ((name.value === currentUser.name) && (email.value === currentUser.email)))}
           type="button" onClick={handleSubmit} value="Сохранить" />
       </form>
       <button className={`${style.profile__exitButton} ${areFieldsLocked ? '' : style.hiddenElement}`}

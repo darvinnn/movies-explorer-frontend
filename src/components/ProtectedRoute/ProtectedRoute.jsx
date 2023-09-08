@@ -3,11 +3,11 @@ import { Navigate } from 'react-router-dom';
 
 import IsLoggedInContext from '../../contexts/IsLoggedInContext';
 
-function ProtectedRoute({ element: Component }) {
+function ProtectedRoute({ element: Component, ...props }) {
   const [isLoggedIn] = useContext(IsLoggedInContext);
 
   return (
-    isLoggedIn ? <Component /> : <Navigate to="/" />
+    isLoggedIn ? <Component {...props} /> : <Navigate to="/" />
   );
 }
 

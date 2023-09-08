@@ -8,11 +8,11 @@ import ValidationError from '../ValidationError/ValidationError.jsx';
 import { login, register } from '../../utils/Api/MainApi.js';
 import IsLoggedInContext from '../../contexts/IsLoggedInContext.js';
 
-function Register({ getUser }) {
+function Register({ setUser }) {
   const name = useInput('', { isEmpty: null, minLength: 2, maxLength: 20 });
   const email = useInput('', { isEmpty: null, isEmail: true });
   const password = useInput('', { isEmpty: null, minLength: 8, maxLength: 25 });
-  const [isLoggedIn] = useContext(IsLoggedInContext);
+  const [isLoggedIn, setIsLoggedIn] = useContext(IsLoggedInContext);
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
@@ -21,7 +21,10 @@ function Register({ getUser }) {
     register({ name: name.value, email: email.value, password: password.value })
       .then(() => {
         login({ email: email.value, password: password.value })
-          .then(() => getUser());
+          .then((res) => {
+            setUser(res);
+            setIsLoggedIn(true);
+          });
       })
       .catch((err) => {
         if (err.status === 409) setError('Пользователь с таким email уже зарегистрирован');
