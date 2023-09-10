@@ -50,6 +50,37 @@ const updateUser = ({ name, email }) => {
   });
 };
 
+const saveMovie = (movie) => {
+  return _request('/movies', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify(movie),
+  });
+};
+
+const deleteMovie = (id) => {
+  return _request(`/movies/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  });
+};
+
+const getMovies = () => {
+  return _request('/movies', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+  });
+};
+
 const _request = (endpoint, fetchObject) => {
   return fetch(`${MOVIES_EXPLORER_API_URL}${endpoint}`, fetchObject)
     .then(_checkResponse);
@@ -61,9 +92,12 @@ const _checkResponse = (res) => {
 };
 
 export {
+  getMovies,
   login,
   register,
   getUser,
   logout,
   updateUser,
+  saveMovie,
+  deleteMovie,
 };

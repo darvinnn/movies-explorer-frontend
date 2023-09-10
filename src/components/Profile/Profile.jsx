@@ -19,7 +19,6 @@ function Profile({ setUser }) {
 
   const name = useInput(currentUser.name, { isEmpty: null, minLength: 2, maxLength: 20 });
   const email = useInput(currentUser.email, { isEmpty: null, isEmail: true });
-  console.log(currentUser);
   const handleSubmit = () => {
     setError(false);
     updateUser({ name: name.value, email: email.value })

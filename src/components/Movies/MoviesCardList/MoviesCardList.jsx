@@ -6,11 +6,12 @@ import More from '../More/More.jsx';
 
 import style from './MoviesCardList.module.css';
 
-const MoviesCardList = memo(function MoviesCardList({ cards }) {
-  const isSavedMovies = useLocation().pathname === '/saved-movies';
+const MoviesCardList = memo(function MoviesCardList({ cards, savedMoviesList, handleDeleteCard }) {
+  const isSavedMoviesPage = useLocation().pathname === '/saved-movies';
   const listRef = useRef();
   const [columns, setColumns] = useState(null);
   const [visibleCardsNumber, setVisibleCardsNumber] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
   const visibleCards = cards.slice(0, visibleCardsNumber);
 
   const handleMoreButton = () => {
@@ -38,12 +39,27 @@ const MoviesCardList = memo(function MoviesCardList({ cards }) {
     };
   }, []);
 
+  const setSavedMovie = (movie) => {
+    return savedMoviesList.find((savedMovie) => {
+      return savedMovie.movieId === movie.id;
+    });
+  };
+
+  const showCards = () => {
+    if (isSavedMoviesPage) return (cards.map(card => (<MoviesCard setErrorMessage={setErrorMessage}
+      key={card.movieId} savedMovie={card} isSavedMoviesPage={isSavedMoviesPage}
+      handleDeleteCard={handleDeleteCard} card={card} />)));
+    else return (visibleCards.map(card => (<MoviesCard setErrorMessage={setErrorMessage} key={card.id}
+      savedMovie={setSavedMovie(card)} isSavedMoviesPage={isSavedMoviesPage} card={card} />)));
+  };
+
   return (
     <section >
-      <ul ref={listRef} id="cardList" className={style.cardList} >
-        {visibleCards.map(card => (<MoviesCard key={card.id} isSavedMovie={isSavedMovies} card={card} />))}
+      <p className={style.error}>{errorMessage}</p>
+      <ul ref={listRef} id="cardList" className={style.cardList}>
+        {showCards()}
       </ul>
-      {(!isSavedMovies && visibleCards.length != cards.length) && <More onClick={handleMoreButton} />}
+      {(!isSavedMoviesPage && visibleCards.length != cards.length) && <More onClick={handleMoreButton} />}
     </section>
   );
 });
