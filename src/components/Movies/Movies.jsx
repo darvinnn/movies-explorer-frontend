@@ -18,7 +18,7 @@ function Movies() {
   const [isSavedMoviesLoading, setIsSavedMoviesLoading] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [isChecked, setIsChecked] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
   const searchInput = useInput('', { isEmpty: null });
   const localStorageRequest = JSON.parse(localStorage.getItem('searchRequest'));
 

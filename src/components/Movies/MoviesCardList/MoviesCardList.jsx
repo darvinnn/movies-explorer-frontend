@@ -16,7 +16,7 @@ const MoviesCardList = memo(function MoviesCardList({ cards, savedMoviesList, ha
 
   const handleMoreButton = () => {
     setVisibleCardsNumber(prevValue => {
-      if (columns === 1) return 2;
+      if (columns === 1) return prevValue + 2;
       if (prevValue % columns === 0) return prevValue + columns;
       const additional = columns - (prevValue % columns);
       return prevValue + columns + additional;
