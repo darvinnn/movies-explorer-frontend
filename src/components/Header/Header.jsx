@@ -3,13 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as LogoSVG } from '../../images/logo.svg';
 
 import Navigation from './Navigation/Navigation.jsx';
-
-
 import style from './Header.module.css';
 
 function Header() {
-  if (useLocation().pathname === '/signup' || useLocation().pathname === '/signin'
-    || useLocation().pathname === '/404') return;
+
+  const location = useLocation().pathname;
+  if (location === '/signup' || location === '/signin' || location === '/404') return;
 
   return (
     <header className={style.header}>

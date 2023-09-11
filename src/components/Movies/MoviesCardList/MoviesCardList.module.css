@@ -1,8 +1,9 @@
 @import url(../../../constants/globalVariables.css);
 
-.cadrList {
-  margin-top: 80px;
+.cardList {
+  margin-top: 50px;
   margin-bottom: 10px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
   justify-content: center;
@@ -10,8 +11,15 @@
   column-gap: 32px;
 }
 
+.error {
+  margin: 10px 0 0;
+  height: 20px;
+  color: #ee3465;
+  font-size: 13px;
+}
+
 @media (max-width: 768px) {
-  .cadrList {
+  .cardList {
     row-gap: 35px;
     column-gap: 24px;
     margin-bottom: 30px;
@@ -19,8 +27,11 @@
 }
 
 @media (max-width: 350px) {
-  .cadrList {
-    margin-top: 50px;
+  .error {
+    margin-top: 5px;
+  }
+  .cardList {
+    margin-top: 25px;
     row-gap: 16px;
   }
 }

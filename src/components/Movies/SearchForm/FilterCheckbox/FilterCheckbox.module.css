@@ -35,12 +35,12 @@
   display: none;
 }
 
-.filterCheckbox__checkbox:checked+.filterCheckbox__button::after {
+.filterCheckbox__checkbox:checked + .filterCheckbox__button::after {
   transform: translateX(16px);
   background-color: var(--main-color);
 }
 
-.filterCheckbox__checkbox:checked+.filterCheckbox__button {
+.filterCheckbox__checkbox:checked + .filterCheckbox__button {
   background-color: var(--accent-color);
 }
 

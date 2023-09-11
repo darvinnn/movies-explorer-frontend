@@ -1,5 +1,11 @@
 @import url(../../constants/globalVariables.css);
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px var(--main-background-color) inset;
+  -webkit-text-fill-color: var(--main-color);
+  caret-color: var(--main-color);
+}
+
 .authorizationField__title {
   display: inline-block;
   margin: 24px 0 5px;
@@ -23,8 +29,8 @@
 }
 
 .authorizationField__input_invalid {
-  color: #EE3465;
-  border-bottom: 1px solid #EE3465;
+  color: #ee3465;
+  border-bottom: 1px solid #ee3465;
 }
 
 .authorizationField__input:focus {
