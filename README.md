@@ -11,3 +11,7 @@ React, JS, CSS Modules, React Router DOM,  REST API.
 ### Ссылка на проект:
 
 https://nikolaev-maxim-diplom.nomoreparties.co
+
+### Ссылка на backend репозиторий:
+
+https://github.com/darvinnn/movies-explorer-api
